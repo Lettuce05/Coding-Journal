@@ -1,0 +1,55 @@
+<------------------------Constructors---------------------->
+
+//NOTE: Constructors Automatically Run when a new object is created
+
+//-----Constructor Syntax-----//
+
+function __construct() {
+
+}
+
+//NOTE: Constructors can be passed information through parameters when new
+object is initialized
+
+//NOTE: $this is a keyword in php, and it refers to the current object being
+created
+
+
+//-----------EXAMPLE-----------//
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <?php
+      class Book {
+        var $title;
+        var $author;
+        var $pages;
+
+        function __construct($aTitle, $aAuthor, $aPages) {
+          $this->title = $aTitle;
+          $this->author = $aAuthor;
+          $this->pages = $aPages;
+
+        }
+      }
+
+      $book1 = new Book("Harry Potter", "JK Rowling", 400);
+
+      $book2 = new Book("Lord Of the Rings", "Tolkien", 700);
+
+      echo $book1->title;
+      echo $book2->title;
+
+     ?>
+
+
+  </body>
+</html>

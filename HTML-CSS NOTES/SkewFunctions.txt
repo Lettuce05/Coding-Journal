@@ -1,0 +1,40 @@
+<-------------------------------Skew Functions------------------------------>
+
+//skewX() Skews element on the X axis by the given degree
+//skewY() Skews element on the Y axis by the given degree
+
+
+//Property
+transform:
+
+//Function
+skewX()
+skewY()
+
+//Value
+Degree
+
+//Example
+transform: skewX(20deg);
+
+//------------------------------EXAMPLE-----------------------------//
+
+<style>
+  div {
+    width: 70%;
+    height: 100px;
+    margin: 50px auto;
+  }
+  #top {
+    background-color: red;
+    transform: skewY(-10deg); //NOTE
+
+  }
+  #bottom {
+    background-color: blue;
+    transform: skewX(24deg); //NOTE
+  }
+</style>
+
+<div id="top"></div>
+<div id="bottom"></div>

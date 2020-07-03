@@ -1,0 +1,16 @@
+//-----------------Data Types------------------//
+
+//Strings
+$phrase = "To be or not to be";
+
+//Integer
+$age = 30;
+
+//Decimal/Floating (IMPORTANT: floats are treated differently than integers)
+$gpa = 3.7;
+
+//Bool
+$isMale = true;
+
+//No Value
+null

@@ -1,0 +1,580 @@
+<---------------------------Display Property------------------------------->
+
+//Property:
+display
+
+//Values
+flex  -  allows you to use other flex properties to build a responsive page
+NOTE: used on parent element
+Example:   display: flex;
+
+//------------------------------------EXAMPLE-------------------------------//
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  header {
+    display: flex; //NOTE
+  }
+  header .profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+  }
+  header .profile-name {
+
+    margin-left: 10px;
+    display: flex;  //NOTE
+  }
+  header .follow-btn {
+
+    margin: 0 0 0 auto;
+    display: flex;  //NOTE
+  }
+  header .follow-btn button {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  header h3, header h4 {
+    display: flex;  //NOTE
+    margin: 0;
+  }
+  #inner p {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  #inner hr {
+    margin: 20px 0;
+    border-style: solid;
+    opacity: 0.1;
+  }
+  footer {
+    display: flex;  //NOTE
+  }
+  footer .stats {
+    display: flex;  //NOTE
+    font-size: 15px;
+  }
+  footer .stats strong {
+    font-size: 18px;
+  }
+  footer .stats .likes {
+    margin-left: 10px;
+  }
+  footer .cta {
+    margin-left: auto;
+  }
+  footer .cta button {
+    border: 0;
+    background: transparent;
+  }
+</style>
+<header>
+  <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
+  <div class="profile-name">
+    <h3>Quincy Larson</h3>
+    <h4>@ossia</h4>
+  </div>
+  <div class="follow-btn">
+    <button>Follow</button>
+  </div>
+</header>
+<div id="inner">
+  <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
+  <span class="date">1:32 PM - 12 Jan 2018</span>
+  <hr>
+</div>
+<footer>
+  <div class="stats">
+    <div class="Retweets">
+      <strong>107</strong> Retweets
+    </div>
+    <div class="likes">
+      <strong>431</strong> Likes
+    </div>
+  </div>
+  <div class="cta">
+    <button class="share-btn">Share</button>
+    <button class="retweet-btn">Retweet</button>
+    <button class="like-btn">Like</button>
+  </div>
+</footer>
+
+<---------------------------------flex direction------------------------------->
+
+//Property:
+
+flex-direction - changes the orientation of the child elements
+
+//Values:
+
+row - aligns children elements horizontally
+Example: flex-direction: row;
+
+row-reverse - reverses the order
+Example: flex-direction: row-reverse;
+
+column - aligns children vertically
+Example: flex-direction: column;
+
+column-reverse - reverses the order
+Example: flex-direction: column-reverse;
+
+//----------------------------------EXAMPLE----------------------------------//
+
+<style>
+  #box-container {
+    display: flex;
+    flex-direction: row-reverse; //NOTE
+    height: 500px;
+
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    width: 50%;
+    height: 50%;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 50%;
+    height: 50%;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
+
+<---------------------------------Justify Content------------------------------>
+
+//Property:
+justify-content
+NOTE: affects the main-axis (horizontal for row)(vertical for column)
+
+//Values:
+center - places items in the center of the flex container
+NOTE: horizontally for row
+NOTE: vertically for column
+Example: justify-content: center;
+
+flex-start - aligns items to the start of the flex container
+NOTE: left for row
+NOTE: top for column
+Example: justify-content: flex-start;
+
+flex-end - aligns items to the end of the flex container
+NOTE: right for row
+NOTE: bottom for column
+Example: justify-content: flex-end;
+
+space-between - aligns items to the center of main with extra space in between
+NOTE: pushes the items to either end of the container and leaves the extra space between them
+Example: justify-content: space-between;
+
+space-around - similar to space-between except the space is distributed around
+the items, half of the extra space is split in half and distributed on either end
+of the container, the other half is left in the center(middle of the two objects)
+Example: justify-content: space-around;
+
+space-evenly - distributes the space evenly between the items and at the ends of
+the container
+Example: justify-content: space-evenly;
+
+//---------------------------------EXAMPLE-----------------------------------//
+
+<style>
+  #box-container {
+    background: gray;
+    display: flex;
+    height: 500px;
+    justify-content: center;  //NOTE
+
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    width: 25%;
+    height: 100%;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 25%;
+    height: 100%;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
+
+<--------------------------------align items----------------------------------->
+
+//Property:
+
+align items
+NOTE: affects the cross-axis (vertical for row)(horizontal for column)
+
+//Values
+flex-start
+
+flex-end
+
+center
+
+stretch - stretches the items to fill the flex container
+NOTE: top-to-bottom for rows
+NOTE: right-to-left for columns
+
+baseline - align items to their baselines
+NOTE: Think of a baseline as the line on which text sits
+
+//----------------------------------EXAMPLE-----------------------------------//
+
+<style>
+  #box-container {
+    background: gray;
+    display: flex;
+    height: 500px;
+    align-items: center; //NOTE
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    width: 200px;
+    font-size: 24px;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 200px;
+    font-size: 18px;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"><p>Hello</p></div>
+  <div id="box-2"><p>Goodbye</p></div>
+</div>
+
+<----------------------------------Flex Wrap----------------------------------->
+
+//Property
+flex-wrap - wraps items based on the size of the items and the size of the container
+
+//Values
+nowrap - default value, does not wrap items
+Example: flex-wrap: nowrap;
+
+wrap - wraps items from left-to-right for rows, and top-to-bottom for columns
+Example: flex-wrap: wrap;
+
+wrap-reverse - wraps items from right-to-left for rows, and bottom-to-top for columns
+Example: flex-wrap: wrap-reverse;
+
+//---------------------------------EXAMPLE------------------------------------//
+
+<style>
+  #box-container {
+    background: gray;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap; //NOTE - wraps the boxes because their combined width percentage is over 100%
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    width: 25%;
+    height: 50%;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 25%;
+    height: 50%;
+  }
+  #box-3 {
+    background-color: violet;
+    width: 25%;
+    height: 50%;
+  }
+  #box-4 {
+    background-color: yellow;
+    width: 25%;
+    height: 50%;
+  }
+  #box-5 {
+    background-color: green;
+    width: 25%;
+    height: 50%;
+  }
+  #box-6 {
+    background-color: black;
+    width: 25%;
+    height: 50%;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+  <div id="box-3"></div>
+  <div id="box-4"></div>
+  <div id="box-5"></div>
+  <div id="box-6"></div>
+</div>
+
+<-------------------------------Flex Shrink------------------------------------>
+
+//Property
+
+flex-shrink - shrinks items if the combined width is greater than the width of the container
+NOTE: Used within flex item
+
+//Value
+NOTE: Any number
+NOTE: The higher the number the greater a object shrinks in proportion to the other objects
+Example: if one item has a value of 1 and another item has a value of 3. The item
+with a value of 3 will shrink 3 times as much as the other item
+
+Example:
+flex-shrink: 1;
+flex-shrink: 3;
+
+//-------------------------------EXAMPLE--------------------------------------//
+
+<style>
+  #box-container {
+    display: flex;
+    height: 500px;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    width: 100%;
+    height: 200px;
+    flex-shrink: 1;  //NOTE
+  }
+
+  #box-2 {
+    background-color: orangered;
+    width: 100%;
+    height: 200px;
+    flex-shrink: 2;  //NOTE
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
+
+<---------------------------------Flex Grow------------------------------------>
+
+//Property
+
+flex-grow - lets objects grow at a specified ratio when the container expands
+
+//Values
+NOTE: Any number
+NOTE: item with larger number will grow that much greater than the other item
+Example: if an item has a value of 1 and another item has a value of 3, the item
+with the value of 3 will grow/expand 3 times as much
+
+Example:  flex-grow: 1;
+          flex-grow: 3;
+
+//--------------------------------EXAMPLE-------------------------------------//
+
+<style>
+  #box-container {
+    display: flex;
+    height: 500px;
+  }
+
+  #box-1 {
+    background-color: dodgerblue;
+    height: 200px;
+    flex-grow: 1;  //NOTE
+  }
+
+  #box-2 {
+    background-color: orangered;
+    height: 200px;
+    flex-grow: 2; //NOTE
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
+
+<----------------------------------Flex Basis---------------------------------->
+
+//Property:
+
+flex-basis - specifies the initial size of an object before CSS makes adjustments
+using flex-shrink and flex-grow
+
+//Values
+NOTE: any number with the px, em, %, etc.. units
+
+Example:
+flex-basis: 30px;
+
+//--------------------------------EXAMPLE-------------------------------------//
+
+<style>
+  #box-container {
+    display: flex;
+    height: 500px;
+  }
+
+  #box-1 {
+    background-color: dodgerblue;
+    height: 200px;
+    flex-basis: 10em;  //NOTE
+  }
+
+  #box-2 {
+    background-color: orangered;
+    height: 200px;
+    flex-basis: 20em;  //NOTE
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
+
+
+<----------------------------------Flex Shorthand------------------------------>
+
+flex-grow, flex-shrink, and flex-basis can all be set at once, using the flex property
+
+Property:
+flex
+
+Values:
+(1st) flex-grow
+(2nd) flex-shrink
+(3rd) flex-basis
+Example: flex; 1 0 10px
+NOTE: default settings:  flex: 0 1 auto;
+
+//----------------------------------EXAMPLE-----------------------------------//
+<style>
+  #box-container {
+    display: flex;
+    height: 500px;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    flex: 2 2 150px; //NOTE
+    height: 200px;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    flex: 1 1 150px; //NOTE
+    height: 200px;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
+
+<----------------------------------Order--------------------------------------->
+
+Property:
+
+order - allows you to set the order of the items in the flex container
+NOTE: Used on flex items
+
+Value:
+NOTE: Any number
+NOTE: Items will be ordered from least to greatest
+
+Example: The box with order 1 will come first
+order: 1;
+order: 2;
+
+//----------------------------------EXAMPLE-----------------------------------//
+
+<style>
+  #box-container {
+    display: flex;
+    height: 500px;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    order: 2;  //NOTE
+    height: 200px;
+    width: 200px;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    order: 1;  //NOTE
+    height: 200px;
+    width: 200px;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>
+
+<--------------------------------Align Self------------------------------------>
+
+Property:
+align-self - allows you to adjust each items alignment individually rather than all at once
+NOTE: Used on flex items
+NOTE: Uses the same values as align-items and will override align-items values
+
+Values:
+
+flex-start
+
+flex-end
+
+center
+
+stretch - stretches the items to fill the flex container
+NOTE: top-to-bottom for rows
+NOTE: right-to-left for columns
+
+baseline - align items to their baselines
+NOTE: Think of a baseline as the line on which text sits
+
+//---------------------------------EXAMPLE------------------------------------//
+
+<style>
+  #box-container {
+    display: flex;
+    height: 500px;
+  }
+  #box-1 {
+    background-color: dodgerblue;
+    align-self: center;  //NOTE
+    height: 200px;
+    width: 200px;
+  }
+
+  #box-2 {
+    background-color: orangered;
+    align-self: flex-end;  //NOTE
+    height: 200px;
+    width: 200px;
+  }
+</style>
+
+<div id="box-container">
+  <div id="box-1"></div>
+  <div id="box-2"></div>
+</div>

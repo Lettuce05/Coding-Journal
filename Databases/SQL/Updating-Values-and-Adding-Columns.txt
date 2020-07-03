@@ -1,0 +1,33 @@
+<----------------------Updating Values and Adding Columns---------------------->
+
+<<-----------------------------------UPDATE----------------------------------->>
+
+//Syntax
+
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+//--------------------EXAMPLE--------------------//
+
+UPDATE products
+SET price = 0.80
+WHERE id=2
+
+//--------------------END OF EXAMPLE--------------------//
+
+<<--------------------------ALTER TABLE - ADD Column-------------------------->>
+
+//Syntax
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+//--------------------EXAMPLE--------------------//
+
+ALTER TABLE products
+ADD stock INT
+
+//NOTE: This is adding a table called stock that is of int datatype
+
+//--------------------END OF EXAMPLE--------------------//

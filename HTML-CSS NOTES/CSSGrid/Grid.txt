@@ -1,0 +1,11 @@
+<----------------------------------Grid Value---------------------------------->
+
+Property:
+display
+
+Value:
+grid
+
+Creates a CSS Grid container
+NOTE: Parent element is called container
+NOTE: Child element is called item

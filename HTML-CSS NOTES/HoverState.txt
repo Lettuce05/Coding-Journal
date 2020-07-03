@@ -1,0 +1,23 @@
+<------------------------Hover State-------------------------->
+//Is a pseudo-class that can be added to selectors
+//Changes the state of the element when the cursor is hovering over it
+
+//Example:
+
+a:hover {
+    color: red;
+}
+
+//-----------------------------EXAMPLE--------------------------------//
+
+<style>
+  a {
+    color: #000;
+  }
+  a:hover {
+    color: blue;
+  }
+
+
+</style>
+<a href="http://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>

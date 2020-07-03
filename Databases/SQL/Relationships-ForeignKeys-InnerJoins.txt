@@ -1,0 +1,55 @@
+<-----------------Relationships, Foreign Keys, and Inner Joins----------------->
+
+<<---------------------------------FOREIGN KEY-------------------------------->>
+
+NOTE: Used to link two tables together
+NOTE: a field in one table that refers to the PRIMARY KEY in another table
+
+//--------------------EXAMPLE--------------------//
+
+CREATE TABLE orders (
+    id INT NOT NULL,
+    order_number INT,
+    customer_id INT,
+    product_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (customer_id) REFERENCES customers(id),     //NOTE: associates the customer_id to the id column of the customers table
+    FOREIGN KEY (product_id) REFERENCES products(id)        //NOTE: associates the product_id to the id column of the products table
+);
+
+//--------------------END OF EXAMPLE--------------------//
+
+<<---------------------------------INNER JOIN-------------------------------->>
+
+//Syntax
+
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2 ON table1.column_name = table2.column_name;
+
+//--------------------EXAMPLE--------------------//
+
+SELECT orders.order_number, customers.first_name, customers.last_name, customers.address
+FROM orders
+INNER JOIN customers ON orders.customer_id = customers.id
+
+//OUTPUT
+
+order_number      first_name        last_name        address
+4362              Angela            Yu               12 Sunset Drive
+
+//--------------------END OF EXAMPLE--------------------//
+
+//--------------------EXAMPLE2--------------------//
+
+SELECT orders.order_number, products.name, products.price, products.stock
+FROM orders
+INNER JOIN products ON orders.product_id = products.id
+
+
+//OUTPUT
+
+order_number      name       price        stock
+4362              Pen        1.2          32
+
+//--------------------END OF EXAMPLE2--------------------//

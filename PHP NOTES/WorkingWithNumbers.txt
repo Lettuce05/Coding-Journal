@@ -1,0 +1,38 @@
+//------------Working With Numbers--------------//
+echo 5 + 9; //Addition
+echo 5 - 9; //Subtraction
+echo 5 / 9; //Division
+echo 5 * 9; //Multiplication
+echo 5 % 9; //Modulus(Remainder)
+
+//PHP follows normal operations order
+
+$num = 10;
+$num++; //adds one
+$num--; //subtracts one
+$num = $num + 10;
+$num += 10; //can be used with + - / *
+
+//----Math Functions----//
+
+//---absolute value---//
+echo abs(-10); //outputs 10
+
+//---power---//
+echo pow(2, 4); //2^4 Output: 16
+
+//---square root---//
+echo sqrt(144); //Output: 12
+
+//---Compare Numbers---//
+echo max(2, 10);  //Output: 10
+echo min(2, 10);  //Output: 2
+
+//---Round Numbers---//
+echo round(3.2); //Output: 3
+echo round(3.7); //Output: 4
+
+  //--Round up--//
+  echo ceil(3.2); //Output: 4
+  //--Round down--//
+  echo floor(3.9); //Output: 3

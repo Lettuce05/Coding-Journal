@@ -1,0 +1,18 @@
+//-------------Getting User Input---------------//
+
+
+//--------Collecting and Outputting Data given by the User-------->
+
+//Uses $_GET[""] method
+
+<form action="site.php" method="get">
+    Name: <input type="text" name="name">
+    <br>
+    Age: <input type="number" name="age">
+    <br>
+    <input type="submit">
+</form>
+<br>
+Your name is <?php echo $_GET["name"] ?>
+<br>
+Your age is <?php echo $_GET["age"] ?>

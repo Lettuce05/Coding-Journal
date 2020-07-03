@@ -1,0 +1,15 @@
+<------------------------------------DELETE------------------------------------>
+
+//Syntax
+
+DELETE FROM table_name
+WHERE condition;
+
+//--------------------EXAMPLE--------------------//
+
+DELETE FROM products
+WHERE id = 2
+
+//NOTE: Will delete the row with id of 2
+
+//--------------------END OF EXAMPLE--------------------//

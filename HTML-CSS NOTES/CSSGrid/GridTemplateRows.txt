@@ -1,0 +1,49 @@
+<------------------------------Grid Template Rows------------------------------>
+
+Property:
+grid-template-rows - Specifies how many rows and their height
+
+Values: any normal dimensions value
+Ex. 50px
+
+Units:
+
+fr - sets the column or row to a fraction of the available space
+auto - sets the column or row to the width or height of its content automatically
+% - adjusts the column or row to the percentage width of its container
+px
+em
+
+Example:
+
+grid-template-rows: 50px 50px;
+
+//----------------------------------EXAMPLE-----------------------------------//
+
+<style>
+  .d1{background:LightSkyBlue;}
+  .d2{background:LightSalmon;}
+  .d3{background:PaleTurquoise;}
+  .d4{background:LightPink;}
+  .d5{background:PaleGreen;}
+
+  .container {
+    font-size: 40px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    /* Only change code below this line */
+    grid-template-rows: 50px 50px; //NOTE
+
+    /* Only change code above this line */
+  }
+</style>
+
+<div class="container">
+  <div class="d1">1</div>
+  <div class="d2">2</div>
+  <div class="d3">3</div>
+  <div class="d4">4</div>
+  <div class="d5">5</div>
+</div>

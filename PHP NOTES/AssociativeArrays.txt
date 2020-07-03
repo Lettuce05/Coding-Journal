@@ -1,0 +1,43 @@
+<------------------------Associative Arrays------------------------->
+
+//Similar to Dictionaries
+
+//----Initializing an Associative array----//
+//Associative Arrays hold key-value pairs
+$grades = array("Jim"=>"A+", "Pam"=>"B-", "Oscar"=>"C+");
+
+//----Modifying the an Associative Array value----//
+$grades["Jim"] = "F";
+echo $grades["Jim"];
+
+//----Find the number of key-value pairs----//
+echo count($grades);
+
+
+
+//------EXAMPLE IN USE------//
+//Accessing User input and outputting the value to the key entered
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <form action="site.php" method="post">
+      <input type="text" name="student">
+      <input type="submit">
+    </form>
+    <?php
+      $grades = array("Jim"=>"A+", "Pam"=>"B-", "Oscar"=>"C+");
+      echo $grades[$_POST["student"]]
+
+     ?>
+
+
+  </body>
+</html>

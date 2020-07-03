@@ -1,0 +1,13 @@
+<----------------------Alternative text for Images----------------------->
+//Alternative text shows up when an image fails to load, and it aids those who
+can not see in understanding the visual
+
+//Alternative text is not needed when the picture is used as a background, or
+is already explained in the text of the website
+//NOTE: In this case alt is still required but can be left as an empty string
+
+//NOTE: alt is a attribute for the img tag
+
+//---------------------------EXAMPLE------------------------------//
+
+<img src="doingKarateWow.jpeg" alt="Camper Cat is doing karate.">

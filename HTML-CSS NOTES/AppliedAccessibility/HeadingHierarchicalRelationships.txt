@@ -1,0 +1,28 @@
+<--------------------Heading Hierarchical Relationships-------------------->
+
+Browsers and people use heading tags as a way to indicate the relationship of
+the information on a website.
+
+When new information is given in a section then a lower(bigger) heading tag
+should be used. When a higher(smaller) heading tag is used it indicates that the
+information follows the previous parent heading
+
+//NOTE: Heading tag should only be changed once each time, if a different size
+is needed then CSS should be used to modify it.
+
+//--------------------------------EXAMPLE----------------------------------//
+
+<h1>How to Become a Ninja</h1>
+<main>
+  <h2>Learn the Art of Moving Stealthily</h2>
+  <h3>How to Hide in Plain Sight</h3>
+  <h3>How to Climb a Wall</h3>
+
+  <h2>Learn the Art of Battle</h2>
+  <h3>How to Strengthen your Body</h3>
+  <h3>How to Fight like a Ninja</h3>
+
+  <h2>Learn the Art of Living with Honor</h2>
+  <h3>How to Breathe Properly</h3>
+  <h3>How to Simplify your Life</h3>
+</main>

@@ -1,0 +1,22 @@
+//PHP NOTES
+
+//------------------------Hello World and Setup------------------------//
+//Starting a local webserver
+//Use web command and type this command:
+php -S localhost:4000
+
+//------------php tag------------//
+<?php
+
+ ?>
+
+//-------------Testing Website file---------------//
+//example of what to type in url
+http://localhost:4000/www/site.php
+//NOTE: After the localhost:4000 put the path of the file being tested
+
+
+//-----------------Hello World------------------//
+<?php
+  echo("Hello World");
+ ?>

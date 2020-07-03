@@ -1,0 +1,31 @@
+<---------------------------Linear Gradient Function------------------------->
+
+//NOTE: Accessed through the background property
+background:
+
+//Function
+linear-gradient()
+
+//Values  //NOTE: List seperated by commas
+Degree
+1st Color
+2nd Color
+...   //NOTE: As many colors as you want in the gradient
+
+//Example
+background: linear-gradient(90deg, #CCFFFF, #FFCCCC);
+
+//---------------------------EXAMPLE-----------------------------//
+
+<style>
+  div {
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+  }
+
+</style>
+
+<div></div>

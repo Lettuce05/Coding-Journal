@@ -1,0 +1,44 @@
+<-------------------Hue of a color------------------------>
+
+//Property
+hsl()
+
+//Values
+Takes the following values, seperated by commas
+Degree: The degree on which the color lays on the color wheel
+Saturation: Amount of gray in a color, given by a percentage (100% is fully saturated)
+Lightness: The amount of white and black in a color, given by percentage, (100% = white, 0% = black, 50% = normal color)
+
+//Example
+background-color: hsl(120, 100%, 50%)
+
+//-------------------------------EXAMPLE-------------------------------//
+
+<style>
+  body {
+    background-color: #FFFFFF;
+  }
+
+  .green {
+    background-color: hsl(120, 100%, 50%); //NOTE:
+
+  }
+
+  .cyan {
+    background-color: hsl(180, 100%, 50%); //NOTE:
+  }
+
+  .blue {
+    background-color: hsl(240, 100%, 50%); //NOTE:
+  }
+
+  div {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+  }
+</style>
+
+<div class="green"></div>
+<div class="cyan"></div>
+<div class="blue"></div>

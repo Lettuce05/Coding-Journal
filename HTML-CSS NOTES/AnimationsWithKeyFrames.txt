@@ -1,0 +1,376 @@
+<---------------------Animations with Key Frames----------------------->
+
+//NOTE: Important propeties
+animation-name:  //Use this property to set the name for animation
+animation-duration: //Length of animation given in seconds (3s)
+animation-fill-mode: //Specifies the style applied when the animation is finished
+
+//NOTE: Rules
+@keyframes  //Used to hold the actions of the animation
+//NOTE: Use percentages for the keyframes
+
+//----------------------------EXAMPLE----------------------------//
+
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+  }
+
+  #rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+    }
+    50% {
+      background-color: green;
+    }
+    100% {
+      background-color: yellow;
+    }
+  }
+
+//---------------------------ANOTHER EXAMPLE---------------------------//
+
+<style>
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    /* Only change code below this line */
+    animation-fill-mode: forwards;
+    /* Only change code above this line */
+  }
+  @keyframes background-color {
+    100% {
+      background-color: #4791d0;
+    }
+  }
+</style>
+<button>Register</button>
+
+----------------------------------------------------------------------------
+NOTE: When an element has a specified position the offset properties can be
+used in the animation rules to create movement
+
+//--------------------------------EXAMPLE------------------------------//
+
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  #rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+      top: 0px;
+      left: 0px;
+
+    }
+    50% {
+      background-color: green;
+      top: 50px;
+      left: 25px;
+
+    }
+    100% {
+      background-color: yellow;
+      top: 0px;
+      left: -25px;
+
+    }
+  }
+</style>
+
+<div id="rect"></div>
+
+-------------------------------------------------------------------------------
+//NOTE: Opacity can also be used with Animations
+//NOTE: Used to fade objects in and out
+
+//--------------------------EXAMPLE----------------------------//
+
+<style>
+
+  #ball {
+    width: 70px;
+    height: 70px;
+    margin: 50px auto;
+    position: fixed;
+    left: 20%;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+
+  @keyframes fade {
+    50% {
+      left: 60%;
+      opacity: 0.1;
+    }
+  }
+
+</style>
+
+<div id="ball"></div>
+</style>
+<div id="rect"></div>
+
+--------------------------------------------------------------------------------
+
+//Additional Animation Properties
+animation-iteration-count: //sets how many times to run the animation
+                           //It can be set to infinite
+
+//----------------------------EXAMPLE-----------------------------//
+
+<style>
+
+  #ball {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;  //NOTE
+  }
+
+  @keyframes bounce{
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 249px;
+      width: 130px;
+      height: 70px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+</style>
+<div id="ball"></div>
+
+//--------------------------ANOTHER EXAMPLE---------------------------//
+
+<style>
+  .back {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation-name: backdiv;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+  }
+
+  .heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+  }
+  .heart:after {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart:before {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  @keyframes backdiv {
+    50% {
+      background: #ffe6f2;
+    }
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+
+</style>
+<div class="back"></div>
+<div class="heart"></div>
+
+-------------------------------------------------------------------------------
+
+//Another Animation Property
+animation-timing-function:
+
+//Values
+ease //starts slow, speeds up in the middle, and ends slow
+ease-out //quick in the beginning and then slows down
+ease-in //slow in the beginning and then speeds up
+linear //constant speed throughout animation
+
+//---------------------------------EXAMPLE--------------------------------//
+
+<style>
+
+  .balls {
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #ball1 {
+    left:27%;
+    animation-timing-function: linear;
+
+  }
+  #ball2 {
+    left:56%;
+    animation-timing-function: ease-out;
+
+  }
+
+  @keyframes bounce {
+    0% {
+      top: 0px;
+    }
+    100% {
+      top: 249px;
+    }
+  }
+
+</style>
+
+<div class="balls" id="ball1"></div>
+<div class="balls" id="ball2"></div>
+
+<-------------------------Cubic Bezier Function--------------------------->
+
+//NOTE: Used with the animation-timing-function
+//NOTE: Allows for further custimization of the speed of an animation
+
+//Curve lays on a 1-by-1 axis/graph
+
+//Function
+cubic-bezier()
+
+//Parameters
+(x1, y1, x2, y2)
+
+//Example
+
+animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+
+
+//---------------------------EXAMPLE------------------------//
+
+<style>
+
+  .balls{
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #ball1 {
+    left: 27%;
+    animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  }
+  #ball2 {
+    left: 56%;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes bounce {
+    0% {
+      top: 0px;
+    }
+    100% {
+      top: 249px;
+    }
+  }
+
+</style>
+
+<div class="balls" id="ball1"></div>
+<div class="balls" id="ball2"></div>

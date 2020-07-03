@@ -1,0 +1,19 @@
+<-----------------Arrays----------------->
+
+
+//----Initializing an array----//
+//Arrays can hold different DataTypes in the same array
+$friends = array("Kevin", 1, false, "Karen", "Austin", "Kim");
+
+//----Modifying an Array value----//
+$friends[1] = "Dwight";
+
+//----Adding Values onto the end of an Array----//
+$friends[6] = "Angela";
+
+//----Accessing and Outputting information from an Array----//
+echo $friends[1];
+
+//----Getting the length of an Array----//
+//Use count function and put the array as the parameter
+echo count($friends);

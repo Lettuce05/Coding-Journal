@@ -1,0 +1,29 @@
+<---------------------------READ, SELECT, and WHERE---------------------------->
+
+<<------------------------------------READ------------------------------------>>
+
+<<-----------------------------------SELECT----------------------------------->>
+
+//Synatx - Selecting Specific columns
+
+SELECT column1, column2, ...
+FROM table_name;
+
+//Syntax - Selecting all fields from a table
+
+ SELECT * FROM table_name;
+
+<<------------------------------------WHERE----------------------------------->>
+
+//Syntax
+
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+//--------------------EXAMPLE--------------------//
+
+SELECT * FROM Customers
+WHERE Country='Mexico';
+
+//--------------------END OF EXAMPLE--------------------//

@@ -1,0 +1,53 @@
+//----------------Working with Strings----------------//
+
+//------Functions Used with Strings---------//
+$phrase = "Giraffe Academy";
+
+//---Accessing characters in a string---//
+echo $phrase[0];    //OUTPUT: G
+
+echo "Anthony"[0];  //Another example
+
+//---Modifying charcters at a specific index---//
+$phrase[0] = "B";
+
+//---Converts string to all lower case---//
+strtolower()
+
+Example:
+echo strtolower($phrase);
+
+//---Converts string to all upper case---//
+strtoupper()
+
+Example:
+echo strtoupper($phrase);
+
+//---Find length of string(Amount of characters)---//
+strlen()
+
+Example:
+echo strlen($phrase);
+
+//---Find and Replace charcters in a string---//
+str_replace()
+
+//First parameter: String being Replaced
+//Second parameter: String to insert
+//Third parameter: String to search
+
+Example:
+$phrase = "Giraffe Academy";
+echo str_replace("Giraffe", "Panda", $phrase);
+
+//---Output a substring of a string---//
+substr()
+
+//First parameter: String to search
+//Second parameter: starting index
+//Third parameter: number of characters to find
+
+Example:
+$phrase = "Giraffe Academy";
+echo substr($phrase, 9, 3); //Output: Aca
+echo substr($phrase, 9); //Output: Academy

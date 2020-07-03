@@ -1,0 +1,27 @@
+<-----------------------Functions-------------------------->
+
+//------------EXAMPLE------------//
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <?php
+        function sayHi($name, $age){
+
+          echo "Hello $name, you are $age. <br><br>";
+
+        }
+
+        sayHi("Tom", 40);
+        sayHi("Dave", 13);
+        sayHi("Oscar", 80);
+     ?>
+
+
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<----------URL Parameters---------->
+
+//Stores variable data in the url
+//Variables can also be set in the url
+
+example:
+
+http://localhost:4000/www/site.php?age=70
+
+//The variable is being stored after the question mark
+//This happens when the get method is used
+//This is not good for security reasons but there are good use cases
+//This is good to use when all the data being entered is not personal
+//Allowing someone to book mark that url, storing the values that they left

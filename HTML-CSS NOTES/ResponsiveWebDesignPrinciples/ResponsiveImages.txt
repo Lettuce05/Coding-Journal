@@ -1,0 +1,37 @@
+<-------------------------Make an Image Responsive--------------------------->
+
+//Example
+
+img {
+  max-width: 100%; //NOTE: Makes the image responsive
+  height: auto; //NOTE: Makes the image keep the original aspect ratio
+}
+
+
+//-------------------------------EXAMPLE-------------------------------//
+
+<style>
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+
+}
+
+img {
+  width: 600px;
+}
+</style>
+
+<img class="responsive-img" src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set">
+<img src="https://s3.amazonaws.com/freecodecamp/FCCStickerPack.jpg" alt="freeCodeCamp stickers set">
+
+<----------------------Make Images Retina Compatible----------------------->
+
+//NOTE: Make the images have their original size
+
+//Example:  //NOTE: Origianl image size is 500 X 500px
+
+<style>
+  img { height: 250px; width: 250px; }
+</style>
+<img src="coolPic500x500" alt="A most excellent picture">

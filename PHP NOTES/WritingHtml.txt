@@ -1,0 +1,14 @@
+<?php
+  echo("Hello World");
+ ?>
+
+ --echo is a php command that allows you to write text into the html code
+ --needs to end in a semi colon
+ example:
+
+ echo "<h1>Anthony's Site<h1>"
+
+--outputs Anthony's Site (on the website)
+--inserts the h1 tag into the html code
+--can type any valid html code with echo command
+--paranthesis is not needed 

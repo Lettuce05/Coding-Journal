@@ -1,0 +1,15 @@
+<-------------------------------URL function------------------------------->
+
+//Accessed through the background property
+//Function
+url()
+//NOTE: Link must be in quotes
+
+
+//---------------------------------EXAMPLE----------------------------------//
+
+<style>
+  body {
+    background: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png")
+  }
+</style>

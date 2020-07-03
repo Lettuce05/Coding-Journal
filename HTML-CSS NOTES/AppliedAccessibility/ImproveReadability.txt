@@ -1,0 +1,14 @@
+<-----------------------------Improve Readability----------------------------->
+
+Make the contrast of the colors between text and the background or any element
+a 4.5:1 ratio
+
+This ratio can be checked using a number of tools online
+
+//NOTE: Increasing the Readability also helps people who are colorblind
+
+//NOTE: Neighbors on the color wheel should be avoided when conveying important
+information
+
+//NOTE: There are resources online that help show how colors may appear to
+people who are colorblind

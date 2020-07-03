@@ -1,0 +1,12 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<main id="main">
+  <h1 id="title">National Hot Rod Association</h1>
+  <div id="img-div">
+    <img src="https://www.speednik.com/wp-content/blogs.dir/1/files/2011/06/nhra60.jpg" id="image">
+    <div id="img-caption">NHRA Anniversary Logo</div>
+  </div>
+
+    <div id="tribute-info">NHRA history information</div>
+    <a id="tribute-link" target="_blank" href="https://www.nhra.com/nhra-history">More Info Here
+</main>

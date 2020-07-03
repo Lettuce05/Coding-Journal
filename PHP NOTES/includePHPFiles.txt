@@ -1,0 +1,27 @@
+<-----------------Include PHP Files------------------->
+
+//Any functions and variables in an included php file can be used and changed
+
+//Variables can be set, that will eventually used in an included file
+
+//---------------EXAMPLE---------------//
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <?php
+      $title = "My First Post";
+      $author = "Mike";
+      $wordCount = 40;
+      include "article-header.php";
+     ?>
+
+
+  </body>
+</html>

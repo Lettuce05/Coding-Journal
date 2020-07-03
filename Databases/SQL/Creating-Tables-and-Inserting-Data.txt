@@ -1,0 +1,59 @@
+<----------------------Creating Tables and Inserting Data---------------------->
+
+<<--------------------------------CREATE Table-------------------------------->>
+
+//Syntax
+
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype
+);
+
+//--------------------EXAMPLE--------------------//
+
+CREATE TABLE products (
+  id INT NOT NULL,
+  name STRING,
+  price MONEY,
+  PRIMARY KEY (id)
+);
+
+//--------------------END OF EXAMPLE--------------------//
+
+<<--------------------------------INSERT DATA--------------------------------->>
+
+//Syntax - Method 1
+
+INSERT INTO table_name
+VALUES (value1, value2, value3)
+
+//NOTE: Each value is for each corresponding column
+
+//--------------------EXAMPLE1--------------------//
+
+INSERT INTO products
+VALUES (1, "Pen", 1.20)
+
+//TABLE
+id          name             price
+1           Pen              1.2
+
+//--------------------END OF EXAMPLE1--------------------//
+
+//Syntax - Method 2
+
+INSERT INTO table_name (col1_name, col3_name)
+VALUES (value_col1, value_col3)
+
+//--------------------EXAMPLE2--------------------//
+
+INSERT INTO products (id,name)
+VALUES (2, "Pencil")
+
+//TABLE
+id          name             price
+1           Pen              1.2
+2           Pencil           Null
+
+//--------------------END OF EXAMPLE2--------------------//

@@ -1,0 +1,25 @@
+h1 {
+  align-self: center;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+}
+#img-div {
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+}
+#image {
+  align-self: center;
+  max-width: 100%;
+  height: auto;
+}
+#img-caption {
+  margin-top: 10px;
+  align-self: center;
+}
