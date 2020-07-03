@@ -1,0 +1,35 @@
+<---------------------------Comparators and Equality--------------------------->
+
+==  is equal to(does not consider dataType)
+=== is equal to(considers dataType)
+!== is not equal to (does not try to convert dataTypes)
+!=  is not equal to
+>   is greater than
+<   is lesser than
+>=  is greater or equal to
+<=  is lesser or equal to
+
+
+//NOTE: Combining Comparators
+
+&& and
+|| or
+!  not
+
+//----------------------Example-----------------------//
+
+prompt("What is your name?");
+prompt("What is the name of your crush?");
+var n = Math.random() * 100;
+n = Math.floor(n) + 1;
+
+if (n > 70) {
+    alert("Your love score is: " + n + "%" + "\nYou are made for eachother.");
+}
+
+if (n > 30 && n <= 70) {
+    alert("Your love score is: " + n + "%");
+}
+if (n <= 30) {
+    alert("Your love score is: " + n + "%" + "\nYou go together like oil and water.");
+}

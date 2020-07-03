@@ -1,0 +1,34 @@
+<----------------------------------Functions---------------------------------->
+
+//NOTE: Write Reusable JavaScript with Functions
+
+//----------------------Example-----------------------//
+
+
+//Declaration of Function
+function reusableFunction() {
+  console.log("Hi World");
+}
+
+reusableFunction();  //calling the function
+
+//NOTE: Passing Values to Functions with Arguments
+
+//----------------------Example-----------------------//
+
+function testFun(param1, param2) {
+  console.log(param1, param2);
+}
+
+//NOTE: Return Functions
+//Functions that return a value
+
+//----------------------Example-----------------------//
+
+function testFunction(a, b) {
+  return a * b;
+}
+
+var testValue = testFunction(4, 3); //Assigning the return value to a variable
+
+//testValue is equal to 12
