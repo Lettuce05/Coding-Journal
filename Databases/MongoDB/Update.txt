@@ -1,0 +1,27 @@
+<---------------------------------- Updating ---------------------------------->
+
+//Syntax
+db.collectionName.updateOne(query, change)
+
+//---------------------Example---------------------//
+
+db.collectionName.updateOne({_id: 1}, {$set: {stock: 32}})
+
+//NOTE: This will find the document with the id that matches 1, and will create a field
+stock with a value of 32
+
+//---------------------End of Example---------------------//
+
+<---------------------------------- Replacing --------------------------------->
+
+//Syntax
+db.collectionName.replaceOne(query, replacementObject)
+
+//---------------------Example---------------------//
+
+db.collectionName.replaceOne({_id: 2}, {"name": "Pen", "price": 1.20, "stock": 32})
+
+//NOTE: This will find the document with the id that matches 1, and will replace
+it with the document specified
+
+//---------------------End of Example---------------------//

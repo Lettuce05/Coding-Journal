@@ -1,0 +1,15 @@
+<----------------------------------- Delete ----------------------------------->
+
+
+//Syntax
+db.collectionName.deleteOne(query)
+
+
+//---------------------Example---------------------//
+
+db.collectionName.deleteOne({_id: 2})
+
+//NOTE: This will find the document with the id that matches 2, and will delete
+the document
+
+//---------------------End of Example---------------------//

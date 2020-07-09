@@ -1,0 +1,40 @@
+<----------------------------- Reading and Queries ---------------------------->
+
+<<---------------------------------- Reading --------------------------------->>
+
+//Syntax
+db.collectionName.find()
+
+//NOTE: This shows every object in the collection
+
+<<---------------------------------- Queries --------------------------------->>
+
+//Syntax
+db.collectionName.find(query)
+
+//---------------------Example---------------------//
+
+db.products.find({"_id": 2})
+
+//NOTE: will return the document with the _id of 2
+
+//---------------------End of Example---------------------//
+
+//Syntax
+db.collectionName.find(query,projection)
+
+//---------------------Example---------------------//
+
+db.products.find({"_id": 2}, {name: 1})
+
+//NOTE: will return the document with its id and name
+
+//---------------------End of Example---------------------//
+
+//---------------------Example 2---------------------//
+
+db.products.find({"_id": 2}, {name: 1, _id: 0})
+
+//NOTE: will return the document with its name only
+
+//---------------------End of Example 2---------------------//

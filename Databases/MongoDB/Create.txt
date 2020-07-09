@@ -1,0 +1,23 @@
+<----------------------------------- Create ----------------------------------->
+
+//Show databases
+show dbs
+
+//Show current database
+db
+
+
+<<----------------------------Create a new database--------------------------->>
+
+//Syntax
+use databaseName
+
+//NOTE: Creates a new database with the specified name
+
+<<------------------------Create a new collection(table)---------------------->>
+
+//Syntax
+db.collectionName.insertOne({key1: value1, key2: value2, key3: value3})
+
+//Show collections
+show collections
