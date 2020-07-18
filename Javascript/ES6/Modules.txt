@@ -1,0 +1,98 @@
+<----------------------------------- Modules ---------------------------------->
+
+Modules allow for very maintainable and modular Javascript code that is easy to
+share between multiple files
+
+<<------------------------------ Module Script ------------------------------->>
+
+The module script allows for programs to take advantage of the functionality to
+export and import parts of or entire files
+
+//Syntax
+
+<script type="module" src="filename.js"></script>
+
+<<-------------------------- Exporting Code Blocks --------------------------->>
+
+Before you can import and use parts of a file, you must first export it. There
+is two ways to do this as shown below
+
+//Method 1
+
+export const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+export const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+
+//Method 2
+
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+
+export {uppercaseString, lowercaseString};
+
+<<------------------------- Importing Javascript Code ------------------------>>
+
+To use code from other files you must import the code.
+//NOTE: You must give the relative file path
+
+//Syntax
+
+import {function1, function2} from './filename.js';
+
+//-------------------- Example --------------------//
+
+import { add, subtract } from './math_functions.js';
+
+//-------------------- End of Example --------------------//
+
+<<--------------------- Importing Everything From a File --------------------->>
+
+Rather than importing parts of a file, you can also import everything from a file
+
+//Syntax
+import * as myModule from "./filename.js";
+
+//-------------------- Example --------------------//
+
+import * as myMathModule from "./math_functions.js";
+
+myMathModule.add(2,3);
+myMathModule.subtract(5,3);
+
+//-------------------- End of Example --------------------//
+
+<<------------------------------ Export Defaults ----------------------------->>
+
+Export defaults are usually used when only one value is being exported from a file
+
+There can only be one export default per file. These defaults are also used to
+create a default value for a file or module.
+
+Export Defaults cannot be used with let, var, or const
+
+//-------------------- Example --------------------//
+
+export default function subtract(x, y) {
+  return x - y;
+}
+
+//-------------------- End of Example --------------------//
+
+<<----------------------------- Importing Defaults --------------------------->>
+
+When importing a default export, no curly braces are used and any name can be used
+
+//-------------------- Example --------------------//
+
+import subtract from './math_functions.js';
+
+//-------------------- End of Example --------------------//
