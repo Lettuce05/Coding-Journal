@@ -1,0 +1,85 @@
+<-------------------------- Levels of Authentication -------------------------->
+
+<<--------------------------------- Level 1 ---------------------------------->>
+NOTE: Email and Password only
+
+NOTE: Simply storing passwords and emails in a db and then checking to see if
+the password matches of the queried email
+
+ <<--------------------------------- Level 2 --------------------------------->>
+
+NOTE: Encryption
+
+////////////////////////////// Mongoose-Encryption /////////////////////////////
+
+NOTE: This encrypts the passwords using a key, so they cannot be seen in the db
+NOTE: DOWNSIDE: If someone gets the key, they will be able to decrypt the keys
+
+//Key Sections of Docs to reference
+
+--Secret String Instead of Two Keys--
+
+--Encrypt Only Certain Fields--
+
+<<--------------------------- Environment Variables -------------------------->>
+
+A file that holds api keys, secrets, and other important information
+
+//////////////////////////////////// DOTENV ///////////////////////////////////
+
+Create a .env file
+
+Simply follow docs for Usage section
+
+////////////////////////////////// Git Ignore //////////////////////////////////
+
+You do not want to commit your environment variables so use a .gitignore file
+
+use the github repo for gitignore templates, to make sure you don't commit anything
+important
+
+ <<--------------------------------- Level 3 --------------------------------->>
+
+/////////////////////////////////// Hashing ////////////////////////////////////
+
+///////////////////////////////////// md5 //////////////////////////////////////
+
+NOTE: We can hash the passwords using the npm package md5
+
+
+ <<--------------------------------- Level 4 --------------------------------->>
+
+////////////////////////////// Salting & Hashing ///////////////////////////////
+
+Salting - Add numbers to the end of your users password and then hash the password
+
+This adds length to a password and makes the password more complex(Not normal words)
+
+/////////////////////////////////// bcrypt /////////////////////////////////////
+
+a type of hash encryption
+
+use npm bcrypt module
+
+use technique 2 for "to hash a password" section in docs(npm bcrypt docs)
+
+use "to check a password" section in docs
+
+ <<--------------------------------- Level 5 --------------------------------->>
+
+/////////////////////////////////// cookies ////////////////////////////////////
+
+npm packages to use:
+
+passport
+passport-local
+passport-local-mongoose
+express-session
+
+<<---------------------------------- Level 6 --------------------------------->>
+
+//////////////////////// OAuth 2.0 & Sign in with Google ///////////////////////
+
+
+Use this Passport js Strategy and follow docs for usage:
+passport-google-oauth20
